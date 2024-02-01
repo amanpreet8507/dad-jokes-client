@@ -3,16 +3,40 @@
 
 .header{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__h1{
         border: 2px solid $purple;
-        width: 20%;
-        align-content: center;
+        width: 90%;
         color: $dark-blue;
         border-radius: 5px;
         padding: 1rem;
+        @include tablet{
+
+        }
+        @include desktop{
+
+        }
     }
-    &__h2{
+    &__p{
         color: $dark-blue;
         font-size: 30px;
     }
+
+    &__profile-img{
+        background-color: $primary-silver;
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 2rem 1rem 2rem 0;
+    
+        @include tablet{
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    
 }
+

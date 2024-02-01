@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Main.scss';
+import Button from "../Button/Button";
 
 const Main = () => {
   const [joke, setJoke] = useState();
 
   const getJokes = async () => {
 
-    const randomNum = Math.floor(Math.random() * 10 + 1);
-
-    const url = `http://localhost:3000/jokes/${randomNum}`;
+    const url = `http://localhost:3000/jokes/random`;
     try {
       const response = await axios.get(url, {
         headers: {
@@ -35,7 +34,9 @@ const Main = () => {
 
   return (
     <main>
-      <h2 class="main__joke">{joke}</h2>
+      <div className="main__joke-container">
+        <h2 class="main__joke">{joke}</h2>
+      </div>
 
       <section class="comment-section">
         <h1 class="main__section-header">Comments</h1>
@@ -61,9 +62,7 @@ const Main = () => {
                 class="comment-section__field"
               ></textarea>
             </div>
-            <button type="submit" class="button">
-              COMMENT
-            </button>
+            <Button />
           </div>
         </form>
         {/* <!-- Added comments Section --> */}

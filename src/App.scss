@@ -1,0 +1,8 @@
+@use './partials/mixins.scss' as *;
+@use './partials/variables.scss' as *;
+
+.App {
+  padding: 1rem 2rem;
+  background-color: $secondary-alabaster;
+
+}

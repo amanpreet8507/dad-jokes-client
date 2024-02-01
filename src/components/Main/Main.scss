@@ -1,6 +1,17 @@
 @use '../../partials/mixins.scss' as *;
 @use '../../partials/variables.scss' as *;
 
+.main{
+  &__joke-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+  &__joke{
+    color: $purple;
+  }
+
+}
 .comment-section{
 
     &__container{
@@ -11,7 +22,7 @@
   
       @include desktop{
         width: 100%;
-        padding: 1% 25%;
+        padding: 1%;
       }
     }
   
@@ -21,11 +32,6 @@
       height: 2.25rem;
       object-fit: cover;
       border-radius: 50%;
-  
-      @include tablet{
-        width: 3rem;
-        height: 3rem;
-      }
     }
   
     &__form{

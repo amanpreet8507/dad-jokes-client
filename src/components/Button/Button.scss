@@ -1,2 +1,18 @@
 @use '../../partials/mixins.scss' as *;
 @use '../../partials/variables.scss' as *;
+
+
+.button__div{
+    display: flex;
+    justify-content: end;
+    // background-image: url("../../asset/image");
+}
+.button{
+    background-color: $purple;
+    color: $secondary-alabaster;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    margin-top: .50rem;
+    border-style: none;
+    border-radius: 4px;
+}
