@@ -1,2 +1,18 @@
 @use '../../partials/mixins.scss' as *;
 @use '../../partials/variables.scss' as *;
+
+.header{
+    text-align: center;
+    &__h1{
+        border: 2px solid $purple;
+        width: 20%;
+        align-content: center;
+        color: $dark-blue;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+    &__h2{
+        color: $dark-blue;
+        font-size: 30px;
+    }
+}

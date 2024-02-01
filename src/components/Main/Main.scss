@@ -1,2 +1,100 @@
 @use '../../partials/mixins.scss' as *;
 @use '../../partials/variables.scss' as *;
+
+.comment-section{
+
+    &__container{
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      margin: 1rem;
+  
+      @include desktop{
+        width: 100%;
+        padding: 1% 25%;
+      }
+    }
+  
+    &__profile-img{
+      background-color: $primary-silver;
+      width: 2.25rem;
+      height: 2.25rem;
+      object-fit: cover;
+      border-radius: 50%;
+  
+      @include tablet{
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  
+    &__form{
+      width: 80%;
+    }
+  
+    &__field{
+      width: 100%;
+      height: 10rem;
+      border-radius: 4px;
+      padding: .75rem;
+      margin: .25rem auto;
+      border: 1px solid $primary-silver;
+      background-color: $secondary-alabaster;
+      color: $primary-black;
+  
+      @include tablet{
+        padding: 1rem;
+      }
+    }
+  
+    &__field-name{
+      height: 2.25rem;
+    }
+    &__label{
+      font-size: $labels-buttons;
+      color: $primary-silver;
+      font-weight: bold;
+    }
+  
+  }
+  
+  // specifically comments__container section content
+  .comments__container{
+  
+    margin: 2rem;
+    font-size: $body-copy;
+  
+    @include desktop{
+      width: 100%;
+      padding: 1% 25%;
+    }
+  
+    &-section{
+      border-top: 2px solid $secondary-mercury;
+      display: flex;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+  
+      @include tablet{
+        margin: auto 5rem auto 3rem;
+      }
+    }
+  
+    &-comment-details{
+      display: inline;
+      padding: auto 2rem;
+      width: 95%;
+    }
+  
+    &-name-date{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+    }
+  
+    &-name{
+      font-weight: bold;
+    }
+  
+  }
